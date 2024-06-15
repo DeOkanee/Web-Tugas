@@ -5,6 +5,32 @@ body {
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
 }
+.tombol-uts-uas {
+  display: flex;
+  gap: 20px;
+}
+.tombol-uts-uas button {
+  margin-bottom: 10px;
+  background-color: aqua;
+  border: none;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+}
+.video-section {
+  display: none;
+  margin-top: 20px;
+}
+#uas-section {
+  display: block;
+}
+#uas-button.active, #uts-button.active {
+  background-color: rgb(0, 167, 0);
+  color: white;
+}
+
 .container {
   max-width: 800px;
   margin: 20px auto;
@@ -40,6 +66,10 @@ body {
 @media (max-width: 440px) {
   .container {
     padding: 0 10px;
+  }
+  .tombol-uts-uas button {
+    margin-bottom: 5px;
+
   }
   .video-container iframe {
     position: absolute;

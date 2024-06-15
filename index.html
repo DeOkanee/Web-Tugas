@@ -1,46 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tugas Video  MAPEL IPS SD DEOKA</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <div class="video-container">
-      <!-- Ganti LINK_VIDEO dengan link video Google Drive Anda -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/oaWtK5Z87O4?si=tqmPQbdezRK4psRK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe style="display: none;" src="#" width="640" height="360" frameborder="0" allowfullscreen="true"></iframe>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Video MAPEL IPS SD DEOKA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tombol-uts-uas">
+        <button id="uts-button">Video UTS</button>
+        <button id="uas-button" class="active">Video UAS</button>
+      </div>
+      <div id="uts-section" class="video-section">
+        <p> <b>Tugas Video UTS Mapel IPS SD</b> <br> Materi Sejarah [Monumen Kerta Gosa Kab.Klungkung Bali]</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oaWtK5Z87O4?si=tqmPQbdezRK4psRK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
-    <div class="keterangan">
-      <table>
-        <tr>
-          <td>Nama</td>
-          <td>: I Made Oka Kembarisna</td>
-        </tr>
-        <tr>
-          <td>NIM</td>
-          <td>: 2211031354</td>
-        </tr>
-        <tr>
-          <td>No absen</td>
-          <td>: 48</td>
-        </tr>
-        <tr>
-          <td>Kelas</td>
-          <td>: A2 Denpasar</td>
-        </tr>
-        <tr>
-          <td>Jurusan</td>
-          <td>: PGSD</td>
-        </tr>
-        <tr>
-          <td>Dosen Pengampu</td>
-          <td>: I Ketut Manik Asta Jaya, S.Ag., M.Pd</td>
-        </tr>
-      </table>
+
+    <div id="uas-section" class="video-section">
+      <p> <b>Tugas Video UAS Mapel IPS SD</b><br> Materi Kenampakan Alam dan Kenampakan Buatan</p>
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/w2PVv2haFms?si=4eRpR0YxRCqK3HSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
-  </div>
-</body>
+      <div class="keterangan">
+        <table>
+          <tr>
+            <td>Nama</td>
+            <td>: I Made Oka Kembarisna</td>
+          </tr>
+          <tr>
+            <td>NIM</td>
+            <td>: 2211031354</td>
+          </tr>
+          <tr>
+            <td>No absen</td>
+            <td>: 48</td>
+          </tr>
+          <tr>
+            <td>Kelas</td>
+            <td>: A2 Denpasar</td>
+          </tr>
+          <tr>
+            <td>Jurusan</td>
+            <td>: PGSD</td>
+          </tr>
+          <tr>
+            <td>Dosen Pengampu</td>
+            <td>: I Ketut Manik Asta Jaya, S.Ag., M.Pd</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script>
+   const utsButton = document.getElementById('uts-button');
+        const uasButton = document.getElementById('uas-button');
+        const utsSection = document.getElementById('uts-section');
+        const uasSection = document.getElementById('uas-section');
+
+        utsButton.addEventListener('click', function() {
+            utsButton.classList.add('active');
+            uasButton.classList.remove('active');
+            utsSection.style.display = 'block';
+            uasSection.style.display = 'none';
+        });
+
+        uasButton.addEventListener('click', function() {
+            uasButton.classList.add('active');
+            utsButton.classList.remove('active');
+            uasSection.style.display = 'block';
+            utsSection.style.display = 'none';
+        });
+  </script>
+  </body>
 </html>
